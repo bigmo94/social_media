@@ -1,6 +1,6 @@
 from django.db import models
 
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from django.conf import settings
@@ -38,7 +38,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractBaseUser):
+class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(_('username'), max_length=32, unique=True)
     email = models.EmailField(_('email'), max_length=64, unique=True)
     phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True)
@@ -73,11 +73,19 @@ class User(AbstractBaseUser):
 
 
 class Profile(models.Model):
+    Male = 1
+    Female = 2
+    GENDER_CHOICES = (
+        (Male, 'Male'),
+        (Female, 'Female')
+    )
+
     first_name = models.CharField(_('first name'), max_length=32)
     last_name = models.CharField(_('last name'), max_length=32)
+    gender = models.IntegerField(_('gender'), choices=GENDER_CHOICES, blank=True)
     birth_date = models.DateField(_("birthday"), blank=True)
-    image = models.ImageField(blank=True)
-    bio = models.CharField(_('biography'), max_length=255)
+    profile_picture = models.ImageField(blank=True, upload_to='profile_pic')
+    bio = models.CharField(_('biography'), max_length=255, blank=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):
