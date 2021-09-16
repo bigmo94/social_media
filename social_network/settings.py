@@ -22,9 +22,6 @@ INSTALLED_APPS = [
     'phonenumbers',
     'users',
     'posts',
-    'feedback',
-    'followers',
-    'pv_messages',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +100,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.Profile'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
