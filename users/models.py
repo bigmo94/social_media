@@ -1,66 +1,17 @@
+from django.conf import settings
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, AbstractUser
 from django.db import models
-
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
-from django.conf import settings
 
 
-class UserManager(BaseUserManager):
-    def create_user(self, email, username, password=None):
-        if not email:
-            raise ValueError('Users must have an email address')
-        if not username:
-            raise ValueError('Users must have a username')
-        user = self.model(
-            email=self.normalize_email(email), username=username
-        )
-
-        user.set_password(password)
-        user.save()
-        return user
-
-    def create_staff_user(self, email, username, password):
-        user = self.create_user(
-            email,
-            password=password, username=username)
-        user.staff = True
-        user.save()
-        return user
-
-    def create_superuser(self, email, username, password):
-        user = self.create_user(
-            email,
-            password=password, username=username)
-        user.staff = True
-        user.superuser = True
-        user.save()
-        return user
-
-
-class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(_('username'), max_length=32, unique=True)
-    email = models.EmailField(_('email'), max_length=64, unique=True)
+class Profile(AbstractUser):
     phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True, null=True)
-    date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
-    is_active = models.BooleanField(_('is active'), default=True)
-    is_staff = models.BooleanField(_('is staff'), default=False)
-    superuser = models.BooleanField(_('is superuser'), default=False)
-    objects = UserManager()
+    email = models.EmailField(_('email address'), unique=True)
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
 
-    class Meta:
-        db_table = 'users'
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
-
-    def __str__(self):
-        return self.username
-
-
-class Profile(models.Model):
     Male = 1
     Female = 2
     GENDER_CHOICES = (
@@ -68,13 +19,10 @@ class Profile(models.Model):
         (Female, 'Female')
     )
 
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    first_name = models.CharField(_('first name'), max_length=32)
-    last_name = models.CharField(_('last name'), max_length=32)
-    gender = models.IntegerField(_('gender'), choices=GENDER_CHOICES, blank=True)
-    birth_date = models.DateField(_("birthday"), blank=True)
-    profile_picture = models.ImageField(blank=True, upload_to='profile_pic')
-    bio = models.CharField(_('biography'), max_length=255, blank=True)
+    gender = models.IntegerField(_('gender'), choices=GENDER_CHOICES, blank=True, null=True)
+    birth_date = models.DateField(_("birthday"), blank=True, null=True)
+    profile_picture = models.ImageField(blank=True, upload_to='profile_pic', null=True)
+    bio = models.CharField(_('biography'), max_length=255, blank=True, null=True)
 
     class Meta:
         db_table = 'profiles'
@@ -82,4 +30,24 @@ class Profile(models.Model):
         verbose_name_plural = _('profiles')
 
     def __str__(self):
-        return self.user.username
+        return self.username
+
+
+class Message(models.Model):
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='sent_messages')
+    receiver = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='received_messages')
+    body = models.TextField(_('body'))
+
+    class Meta:
+        db_table = 'messages'
+        verbose_name = _('message')
+        verbose_name_plural = _('messages')
+
+
+class Follow(models.Model):
+    follower = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followings", on_delete=models.CASCADE)
+    following = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followers", on_delete=models.CASCADE)
+    created_time = models.DateTimeField(_('created time'), auto_now_add=True)
+
+    class Meta:
+        db_table = 'follows'
