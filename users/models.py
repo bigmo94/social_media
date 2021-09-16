@@ -68,13 +68,18 @@ class Profile(models.Model):
         (Female, 'Female')
     )
 
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     first_name = models.CharField(_('first name'), max_length=32)
     last_name = models.CharField(_('last name'), max_length=32)
     gender = models.IntegerField(_('gender'), choices=GENDER_CHOICES, blank=True)
     birth_date = models.DateField(_("birthday"), blank=True)
     profile_picture = models.ImageField(blank=True, upload_to='profile_pic')
     bio = models.CharField(_('biography'), max_length=255, blank=True)
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'profiles'
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
 
     def __str__(self):
         return self.user.username
