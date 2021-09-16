@@ -10,7 +10,7 @@ class PVMessage(models.Model):
     body = models.TextField(_('body'))
 
     class Meta:
-        db_table = 'messages'
+        db_table = 'pv_messages'
         verbose_name = _('message')
-        verbose_name_plural = _('messages')
+        verbose_name_plural = _('pv_messages')
 
