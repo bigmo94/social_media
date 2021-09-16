@@ -41,7 +41,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(_('username'), max_length=32, unique=True)
     email = models.EmailField(_('email'), max_length=64, unique=True)
-    phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True)
+    phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True, null=True)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_active = models.BooleanField(_('is active'), default=True)
     is_staff = models.BooleanField(_('is staff'), default=False)
