@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'posts',
     'feedback',
     'followers',
+    'messages',
 ]
 
 MIDDLEWARE = [
