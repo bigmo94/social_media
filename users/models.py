@@ -17,7 +17,7 @@ class UserManager(BaseUserManager):
         )
 
         user.set_password(password)
-        user.save(using=self._db)
+        user.save()
         return user
 
     def create_staff_user(self, email, username, password):
@@ -25,7 +25,7 @@ class UserManager(BaseUserManager):
             email,
             password=password, username=username)
         user.staff = True
-        user.save(using=self._db)
+        user.save()
         return user
 
     def create_superuser(self, email, username, password):
@@ -34,7 +34,7 @@ class UserManager(BaseUserManager):
             password=password, username=username)
         user.staff = True
         user.superuser = True
-        user.save(using=self._db)
+        user.save()
         return user
 
 
@@ -43,8 +43,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email'), max_length=64, unique=True)
     phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
-    active = models.BooleanField(_('is active'), default=True)
-    staff = models.BooleanField(_('is staff'), default=False)
+    is_active = models.BooleanField(_('is active'), default=True)
+    is_staff = models.BooleanField(_('is staff'), default=False)
     superuser = models.BooleanField(_('is superuser'), default=False)
     objects = UserManager()
 
@@ -58,18 +58,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
-
-    @property
-    def is_staff(self):
-        return self.staff
-
-    @property
-    def is_superuser(self):
-        return self.superuser
-
-    @property
-    def is_active(self):
-        return self.active
 
 
 class Profile(models.Model):
