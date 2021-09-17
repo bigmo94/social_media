@@ -79,6 +79,10 @@ class ProfileLoginSerializer(serializers.ModelSerializer):
 
         return profile
 
+    @staticmethod
+    def get_token(self, obj):
+        return obj.auth_token.key
+
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
