@@ -18,6 +18,7 @@ class ProfileRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['email', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         email = validated_data['email']
