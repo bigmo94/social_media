@@ -73,6 +73,7 @@ class ProfileLoginSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['email', 'password']
+        extra_kwargs = {'email': {"validators": []}}
 
     def create(self, validated_data):
         profile = authenticate(**validated_data)
