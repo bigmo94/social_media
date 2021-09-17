@@ -42,7 +42,7 @@ class ProfileRegisterSerializer(serializers.ModelSerializer):
 
 
 class ProfileVerifySerializer(serializers.ModelSerializer):
-    verify_code = serializers.IntegerField()
+    verify_code = serializers.IntegerField(write_only=True)
 
     class Meta:
         model = Profile
