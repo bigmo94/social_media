@@ -46,6 +46,7 @@ class ProfileVerifySerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['email', 'verify_code']
+        extra_kwargs = {'email': {"validators": []}}
 
     def create(self, validated_data):
         email = validated_data['email']
@@ -64,6 +65,7 @@ class ProfileVerifySerializer(serializers.ModelSerializer):
             profile.save()
         else:
             raise ValidationError('Wrong verify code')
+        return profile
 
 
 class ProfileLoginSerializer(serializers.ModelSerializer):
@@ -73,15 +75,11 @@ class ProfileLoginSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         profile = authenticate(**validated_data)
-        if not profile:
+        if profile is None:
             raise ValidationError('Wrong credentials sent')
         Token.objects.get_or_create(user=profile)
 
         return profile
-
-    @staticmethod
-    def get_token(self, obj):
-        return obj.auth_token.key
 
 
 class ProfileSerializer(serializers.ModelSerializer):
