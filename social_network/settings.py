@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'phonenumbers',
     'users',
     'posts',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
