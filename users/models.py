@@ -1,17 +1,12 @@
-from django.conf import settings
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, AbstractUser
 from django.db import models
+
+from django.conf import settings
+from django.contrib.auth.models import AbstractBaseUser, AbstractUser
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Profile(AbstractUser):
-    phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True, null=True)
-    email = models.EmailField(_('email address'), unique=True)
-
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
-
     Male = 1
     Female = 2
     GENDER_CHOICES = (
@@ -19,10 +14,15 @@ class Profile(AbstractUser):
         (Female, 'Female')
     )
 
+    phone_number = PhoneNumberField(_('phone number'), unique=True, blank=True, null=True)
+    email = models.EmailField(_('email address'), unique=True)
     gender = models.IntegerField(_('gender'), choices=GENDER_CHOICES, blank=True, null=True)
     birth_date = models.DateField(_("birthday"), blank=True, null=True)
     profile_picture = models.ImageField(blank=True, upload_to='profile_pic', null=True)
     bio = models.CharField(_('biography'), max_length=255, blank=True, null=True)
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ['username']
 
     class Meta:
         db_table = 'profiles'
