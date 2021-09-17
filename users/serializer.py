@@ -73,7 +73,7 @@ class ProfileLoginSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['email', 'password']
-        extra_kwargs = {'email': {"validators": []}}
+        extra_kwargs = {'email': {"validators": []}, 'password': {'write_only': True}}
 
     def create(self, validated_data):
         profile = authenticate(**validated_data)
@@ -82,6 +82,9 @@ class ProfileLoginSerializer(serializers.ModelSerializer):
         Token.objects.get_or_create(user=profile)
 
         return profile
+
+    def get_token(self, obj):
+        return obj.auth_token.key
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -108,11 +111,3 @@ class ProfileSerializer(serializers.ModelSerializer):
         )
 
         return profile
-
-    def to_representation(self, instance):
-        request = self.context['request']
-        Token.objects.get_or_create(user=instance)
-        data = super(ProfileSerializer, self).to_representation(instance)
-        if request.user == instance:
-            data['token'] = instance.auth_token.key
-        return data
