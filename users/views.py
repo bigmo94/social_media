@@ -4,6 +4,7 @@ from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
 
 from .models import Profile
+from .permissions import IsProfileOwner
 from .serializer import (ProfileSerializer,
                          ProfileRegisterSerializer,
                          ProfileLoginSerializer,
@@ -28,6 +29,7 @@ class ProfileLoginAPIView(generics.CreateAPIView):
 class ProfileRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+    permission_classes = [IsProfileOwner, ]
     authentication_classes = (TokenAuthentication,)
     lookup_field = 'pk'
     lookup_url_kwarg = 'pk'
