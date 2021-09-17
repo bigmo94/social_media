@@ -57,7 +57,7 @@ class ProfileVerifySerializer(serializers.ModelSerializer):
 
         cache_key = 'login_code_{}'.format(email)
         sent_code = cache.get(cache_key, None)
-        input_code = validated_data['verify_code']
+        input_code = validated_data.get('verify_code')
 
         if sent_code and sent_code == input_code:
             profile.is_active = True
