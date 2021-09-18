@@ -6,7 +6,7 @@ from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from rest_framework.exceptions import ValidationError
 
-from .models import Profile
+from .models import Profile, Message
 from .utils import send_verification_code
 
 
@@ -111,3 +111,12 @@ class ProfileSerializer(serializers.ModelSerializer):
         )
 
         return profile
+
+
+class MessageSerializer(serializers.ModelSerializer):
+    sender = serializers.SlugRelatedField(many=False, slug_field='username', queryset=Profile.objects.all())
+    receiver = serializers.SlugRelatedField(many=False, slug_field='username', queryset=Profile.objects.all())
+
+    class Meta:
+        model = Message
+        fields = ['sender', 'receiver', 'body']

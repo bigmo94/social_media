@@ -1,14 +1,16 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 
 from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.parsers import JSONParser
 
-from .models import Profile
+from .models import Profile, Message
 from .permissions import IsProfileOwner
 from .serializer import (ProfileSerializer,
                          ProfileRegisterSerializer,
                          ProfileLoginSerializer,
-                         ProfileVerifySerializer)
+                         ProfileVerifySerializer, MessageSerializer)
 
 
 class ProfileRegisterAPIView(generics.CreateAPIView):
@@ -33,3 +35,17 @@ class ProfileRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView)
     authentication_classes = (TokenAuthentication,)
     lookup_field = 'pk'
     lookup_url_kwarg = 'pk'
+
+
+def message_view(request, sender=None, receiver=None):
+    if request.method == 'GET':
+        messages = Message.objects.filter(sender_id=sender, receiver_id=receiver)
+        serializer = MessageSerializer(messages, many=True, context={'request': request})
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = MessageSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
