@@ -4,9 +4,13 @@ from .models import Post
 from .serializer import PostSerializer
 
 
-class PostList(generics.ListCreateAPIView):
-    serializer_class = PostSerializer
+class PostListAPIView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
+    serializer_class = PostSerializer
 
-    def perform_create(self, serializer):
-        serializer.save(profile=self.request.user)
+
+class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    lookup_field = 'pk'
+    lookup_url_kwarg = 'pk'
