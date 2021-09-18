@@ -9,8 +9,17 @@ class PostListAPIView(generics.ListCreateAPIView):
     serializer_class = PostSerializer
 
 
-class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+class PostDetailAPIView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     lookup_field = 'pk'
     lookup_url_kwarg = 'pk'
+
+
+class PostRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = []
+    lookup_field = 'pk'
+    lookup_url_kwarg = 'pk'
+
