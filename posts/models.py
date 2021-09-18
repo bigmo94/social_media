@@ -8,7 +8,7 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='posts')
     body = models.TextField(_('body'), blank=True, null=True)
     pub_date = models.DateField(_('publication date'), auto_now_add=True)
-    image = models.ImageField(upload_to='post_image', width_field=100, height_field=100, blank=True, null=True)
+    image = models.ImageField(upload_to='post_image', blank=True, null=True)
 
     class Meta:
         db_table = 'posts'
