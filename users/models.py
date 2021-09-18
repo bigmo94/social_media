@@ -51,3 +51,4 @@ class Follow(models.Model):
 
     class Meta:
         db_table = 'follows'
+        unique_together = ['follower', 'following']
