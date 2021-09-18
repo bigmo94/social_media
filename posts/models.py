@@ -8,16 +8,12 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='posts')
     body = models.TextField(_('body'), blank=True, null=True)
     pub_date = models.DateField(_('publication date'), auto_now_add=True)
+    image = models.ImageField(upload_to='post_image', width_field=100, height_field=100)
 
     class Meta:
         db_table = 'posts'
         verbose_name = _('post')
         verbose_name_plural = _('posts')
-
-
-class PostImage(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='post_image', width_field=100, height_field=100)
 
 
 class Comment(models.Model):
