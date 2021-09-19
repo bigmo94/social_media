@@ -6,7 +6,7 @@ from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from rest_framework.exceptions import ValidationError
 
-from .models import Profile, Message
+from .models import Profile, Message, Follow
 from .utils import send_verification_code
 
 
@@ -120,3 +120,9 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = ['sender', 'receiver', 'body']
+
+
+class FollowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Follow
+        fields = ('id', 'following', 'follower', 'created_time')
