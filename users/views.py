@@ -1,16 +1,17 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from rest_framework import generics
+from rest_framework import generics, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.parsers import JSONParser
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-from .models import Profile, Message
+from .models import Profile, Message, Follow
 from .permissions import IsProfileOwner
 from .serializer import (ProfileSerializer,
                          ProfileRegisterSerializer,
                          ProfileLoginSerializer,
-                         ProfileVerifySerializer, MessageSerializer)
+                         ProfileVerifySerializer, MessageSerializer, FollowSerializer)
 
 
 class ProfileRegisterAPIView(generics.CreateAPIView):
@@ -47,5 +48,11 @@ def message_view(request, sender=None, receiver=None):
         serializer = MessageSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class FollowViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    serializer_class = FollowSerializer
+    queryset = Follow.objects.all()
