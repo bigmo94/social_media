@@ -7,12 +7,15 @@ from .models import Post, Comment
 from .serializer import PostSerializer, CommentSerializer, PostLikeSerializer
 
 
-class PostListAPIView(generics.ListCreateAPIView):
+class PostListCreateAPIView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+    def perform_create(self, serializer):
+        Post.objects.create(user=self.request.user, **serializer.validated_data)
 
-class PostDetailAPIView(generics.RetrieveAPIView):
+
+class PostRetrieveAPIView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     lookup_field = 'pk'
