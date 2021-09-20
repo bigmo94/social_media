@@ -70,9 +70,11 @@ class ProfileVerifySerializer(serializers.ModelSerializer):
 
 
 class ProfileLoginSerializer(serializers.ModelSerializer):
+    token = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Profile
-        fields = ['email', 'password']
+        fields = ['email', 'password', 'token']
         extra_kwargs = {'email': {"validators": []}, 'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -114,12 +116,25 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class MessageSerializer(serializers.ModelSerializer):
-    sender = serializers.SlugRelatedField(many=False, slug_field='username', queryset=Profile.objects.all())
-    receiver = serializers.SlugRelatedField(many=False, slug_field='username', queryset=Profile.objects.all())
+    sender = serializers.SerializerMethodField(read_only=True, required=False)
+    target = serializers.SerializerMethodField(read_only=True, required=False)
+    receiver = serializers.CharField(write_only=True, required=False)
 
     class Meta:
         model = Message
-        fields = ['sender', 'receiver', 'body']
+        fields = ['sender', 'receiver', 'body', 'target']
+
+    def create(self, validated_data):
+        request = self.context.get('request')
+        receiver = Profile.objects.get(username=validated_data.pop('receiver'))
+        instance = Message.objects.create(sender=request.user, receiver=receiver, **validated_data)
+        return instance
+
+    def get_target(self, obj):
+        return obj.receiver.username
+
+    def get_sender(self, obj):
+        return obj.sender.username
 
 
 class FollowSerializer(serializers.ModelSerializer):
