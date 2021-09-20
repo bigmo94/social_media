@@ -14,7 +14,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    writer = SerializerMethodField()
+    writer = SerializerMethodField(read_only=True)
 
     class Meta:
         model = Comment
@@ -25,6 +25,8 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class PostLikeSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(write_only=True)
+
     class Meta:
         model = PostLike
-        fields = ('post', 'liked_by')
+        fields = ('post', 'liked_by', 'id')
