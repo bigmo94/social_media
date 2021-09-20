@@ -45,10 +45,15 @@ class Message(models.Model):
 
 
 class Follow(models.Model):
-    follower = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followings", on_delete=models.CASCADE)
-    following = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followers", on_delete=models.CASCADE)
+    follower = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followings", on_delete=models.CASCADE,
+                                 verbose_name=_('follower'))
+    following = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="followers", on_delete=models.CASCADE,
+                                  verbose_name=_('following'))
     created_time = models.DateTimeField(_('created time'), auto_now_add=True)
 
     class Meta:
         db_table = 'follows'
         unique_together = ['follower', 'following']
+
+    def __str__(self):
+        return f'{self.follower} follows {self.following}'
