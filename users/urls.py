@@ -15,6 +15,6 @@ urlpatterns = [
     path('login/', ProfileLoginAPIView.as_view(), name='login'),
     path('profile/<int:pk>/', ProfileRetrieveUpdateDestroyAPIView.as_view(), name='profile'),
     path('message/', MessageListCreateAPIView.as_view(), name='message'),
-    path('follow/', FollowCreateListAPIView.as_view())
+    path('follow/', FollowCreateListAPIView.as_view(), name='follow')
 
 ]
