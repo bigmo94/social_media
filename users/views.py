@@ -5,6 +5,7 @@ from rest_framework import generics, status
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
+from rest_framework.response import Response
 
 from .models import Profile, Message, Follow
 from .permissions import IsOwnerOrReadOnly, IsOwner
@@ -50,6 +51,18 @@ class MessageListCreateAPIView(generics.ListCreateAPIView):
 
 
 class FollowCreateListAPIView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticatedOrReadOnly,)
     serializer_class = FollowSerializer
     queryset = Follow.objects.all()
+
+    def perform_create(self, serializer):
+        following = Profile.objects.filter(username=serializer.validated_data.get('follower'))[0]
+        instance = Follow.objects.create(follower=self.request.user, following=following)
+        return instance
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        instance = self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        response = {'username': instance.following.username}
+        return Response(response, status=status.HTTP_201_CREATED, headers=headers)
