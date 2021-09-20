@@ -2,14 +2,15 @@ from rest_framework import serializers
 from rest_framework.fields import SerializerMethodField
 
 from posts.models import Post, Comment, PostLike
+from users.serializer import ProfileSerializer
 
 
 class PostSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source="user.username")
+    user = ProfileSerializer(read_only=True)
 
     class Meta:
         model = Post
-        fields = ['id', 'body', 'image', 'user']
+        fields = ['body', 'image', 'user']
 
 
 class CommentSerializer(serializers.ModelSerializer):
