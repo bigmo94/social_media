@@ -25,7 +25,7 @@ class PostRetrieveAPIView(generics.RetrieveAPIView):
 class PostRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = []
+    permission_classes = [IsOwnerOrReadOnly, ]
     lookup_field = 'pk'
     lookup_url_kwarg = 'pk'
 
