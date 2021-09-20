@@ -1,6 +1,7 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .permissions import IsOwnerOrReadOnly
 
 from .models import Post, Comment
 from .serializer import PostSerializer, CommentSerializer, PostLikeSerializer
@@ -34,7 +35,7 @@ class CommentListAPIView(generics.ListCreateAPIView):
 class CommentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = []
+    permission_classes = [IsOwnerOrReadOnly, ]
     lookup_field = 'pk'
     lookup_url_kwarg = 'pk'
 
