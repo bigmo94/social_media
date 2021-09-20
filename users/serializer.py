@@ -138,6 +138,9 @@ class MessageSerializer(serializers.ModelSerializer):
 
 
 class FollowSerializer(serializers.ModelSerializer):
+    following = ProfileSerializer(read_only=True)
+    follower = serializers.CharField(write_only=True)
+
     class Meta:
         model = Follow
-        fields = ('id', 'following', 'follower', 'created_time')
+        fields = ('following', 'follower', 'created_time')
