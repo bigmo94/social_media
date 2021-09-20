@@ -1,0 +1,5663 @@
+{
+	"info": {
+		"_postman_id": "63315361-da41-4f71-ad42-5d69c5ab60e4",
+		"name": "social_media_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/register/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/register/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"register",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:10:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"profile with this email address already exists.\"\n    ]\n}"
+						},
+						{
+							"name": "http://127.0.0.1:8000/users/register/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"register",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:12:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"m.rezaie94@yahoo.com\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "verify",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/verify/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "71256",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/verify/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"verify",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/verify/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71256",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/verify/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"verify",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:13:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"m.rezaie94@yahoo.com\"\n}"
+						},
+						{
+							"name": "http://127.0.0.1:8000/users/verify/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/verify/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"verify",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:14:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    \"Wrong verify code\"\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/login/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:16:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"m.rezaie94@yahoo.com\",\n    \"token\": \"3691f1e419cf93b668e81d6a534aae56dc8c3897\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@12345",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/login/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@12345",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:16:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    \"Wrong credentials sent\"\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/profile/1/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/profile/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/profile/1/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/profile/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"profile",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:18:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Method \\\"POST\\\" not allowed.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/profile/5/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/profile/5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								"5",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/profile/5/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/profile/5/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"profile",
+										"5",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:21:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"username\": \"m.rezaie94@yahoo.com\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"phone_number\": null,\n    \"email\": \"m.rezaie94@yahoo.com\",\n    \"gender\": null,\n    \"birth_date\": null,\n    \"profile_picture\": null,\n    \"bio\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/profile/5/",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text"
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/profile/5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								"5",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/profile/5/",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text"
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text"
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/profile/5/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"profile",
+										"5",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:25:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "319"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"username\": \"bigmo\",\n    \"first_name\": \"mohamad\",\n    \"last_name\": \"rezaie\",\n    \"phone_number\": \"+982144890235\",\n    \"email\": \"m.rezaie94@yahoo.com\",\n    \"gender\": 1,\n    \"birth_date\": null,\n    \"profile_picture\": \"http://127.0.0.1:8000/media/profile_pic/114-1149878_setting-user-avatar-in-specific-size-without-breaking_zs3SZuW.png\",\n    \"bio\": \"hello boys\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/profile/5/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "71257",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text"
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/profile/5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								"5",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/profile/5/",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 3691f1e419cf93b668e81d6a534aae56dc8c3897",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text"
+										},
+										{
+											"key": "verify_code",
+											"value": "71257",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text"
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/profile/5/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"profile",
+										"5",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:25:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/message/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text"
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/message/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"message",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/message/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text"
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/message/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"message",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 11:45:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"sender\": \"bigmo\",\n    \"body\": \"hi\",\n    \"target\": \"yasi\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/posts/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"create",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/posts/create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text"
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first post",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/create/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"create",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 12:04:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": \"this is first post\",\n    \"image\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/posts/create/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"create",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/posts/create/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text"
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/create/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"create",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 12:05:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "937"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"body\": \"hi\",\n            \"image\": \"http://127.0.0.1:8000/media/post_image/wil-stewart-pHANr-CpbYM-unsplash_kBLKRCR.jpg\",\n            \"user\": {\n                \"id\": 6,\n                \"username\": \"bigmo\",\n                \"first_name\": \"mohamad\",\n                \"last_name\": \"rezaie\",\n                \"phone_number\": \"+982144890235\",\n                \"email\": \"m.rezaie94@yahoo.com\",\n                \"gender\": 1,\n                \"birth_date\": null,\n                \"profile_picture\": \"http://127.0.0.1:8000/media/profile_pic/114-1149878_setting-user-avatar-in-specific-size-without-breaking_OgyQJJZ.png\",\n                \"bio\": \"hello boys\"\n            }\n        },\n        {\n            \"body\": \"this is first post\",\n            \"image\": \"http://127.0.0.1:8000/media/post_image/wil-stewart-pHANr-CpbYM-unsplash_4n1XCMs.jpg\",\n            \"user\": {\n                \"id\": 6,\n                \"username\": \"bigmo\",\n                \"first_name\": \"mohamad\",\n                \"last_name\": \"rezaie\",\n                \"phone_number\": \"+982144890235\",\n                \"email\": \"m.rezaie94@yahoo.com\",\n                \"gender\": 1,\n                \"birth_date\": null,\n                \"profile_picture\": \"http://127.0.0.1:8000/media/profile_pic/114-1149878_setting-user-avatar-in-specific-size-without-breaking_OgyQJJZ.png\",\n                \"bio\": \"hello boys\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/posts/edit/3/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/edit/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"edit",
+								"3",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/posts/4/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text"
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"4",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/posts/4/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text"
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"4",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 12:13:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "450"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": \"this is first post\",\n    \"image\": \"http://127.0.0.1:8000/media/post_image/wil-stewart-pHANr-CpbYM-unsplash_4n1XCMs.jpg\",\n    \"user\": {\n        \"id\": 6,\n        \"username\": \"bigmo\",\n        \"first_name\": \"mohamad\",\n        \"last_name\": \"rezaie\",\n        \"phone_number\": \"+982144890235\",\n        \"email\": \"m.rezaie94@yahoo.com\",\n        \"gender\": 1,\n        \"birth_date\": null,\n        \"profile_picture\": \"http://127.0.0.1:8000/media/profile_pic/114-1149878_setting-user-avatar-in-specific-size-without-breaking_OgyQJJZ.png\",\n        \"bio\": \"hello boys\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "follow",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/follow/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first edited post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "following",
+									"value": "yasi",
+									"type": "text"
+								},
+								{
+									"key": "follower",
+									"value": "bigmo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/follow/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"follow",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/follow/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first edited post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "following",
+											"value": "yasi",
+											"type": "text"
+										},
+										{
+											"key": "follower",
+											"value": "bigmo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/follow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"follow",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 13:10:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"bigmo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/follow/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first edited post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "following",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "follower",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/follow/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"follow",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/follow/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first edited post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "following",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "follower",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/follow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"follow",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 13:12:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"following\": {\n                \"id\": 6,\n                \"username\": \"bigmo\",\n                \"first_name\": \"mohamad\",\n                \"last_name\": \"rezaie\",\n                \"phone_number\": \"+982144890235\",\n                \"email\": \"m.rezaie94@yahoo.com\",\n                \"gender\": 1,\n                \"birth_date\": null,\n                \"profile_picture\": \"http://127.0.0.1:8000/media/profile_pic/114-1149878_setting-user-avatar-in-specific-size-without-breaking_OgyQJJZ.png\",\n                \"bio\": \"hello boys\"\n            },\n            \"created_time\": \"2021-09-20T13:10:44.119972Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/unfollow/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first edited post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "following",
+									"value": "yasi",
+									"type": "text"
+								},
+								{
+									"key": "follower",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/unfollow/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"unfollow",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/users/unfollow/",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "hi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first edited post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "following",
+											"value": "yasi",
+											"type": "text"
+										},
+										{
+											"key": "follower",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/unfollow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"unfollow",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 13:14:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "DELETE, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/posts/comments/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "comment1",
+									"type": "text"
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first edited post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "following",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "follower",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"comments",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/posts/comments/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "asdf@1234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "m.rezaie94@yahoo.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "username",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "verify_code",
+											"value": "16330",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "first_name",
+											"value": "mohamad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "rezaie",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "+982144890235",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_picture",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+											"disabled": true
+										},
+										{
+											"key": "bio",
+											"value": "hello boys",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth_day",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiver",
+											"value": "yasi",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "comment1",
+											"type": "text"
+										},
+										{
+											"key": "sender",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "this is first edited post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "following",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "follower",
+											"value": "bigmo",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/comments/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"comments",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 13:41:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": \"comment1\",\n    \"writer\": \"bigmo\",\n    \"pub_time\": \"2021-09-20T13:41:35.868182Z\",\n    \"post\": 3\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/posts/like/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "asdf@1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "m.rezaie94@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "m.rezaie94@yahoo.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "bigmo",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "verify_code",
+							"value": "16330",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "mohamad",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "rezaie",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone_number",
+							"value": "+982144890235",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profile_picture",
+							"type": "file",
+							"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+							"disabled": true
+						},
+						{
+							"key": "bio",
+							"value": "hello boys",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birth_day",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "receiver",
+							"value": "yasi",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "body",
+							"value": "hi",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sender",
+							"value": "bigmo",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "body",
+							"value": "this is first edited post",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "following",
+							"value": "bigmo",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "follower",
+							"value": "bigmo",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/like/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"like",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/posts/like/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 521b7eb279da8f9b5dd2659b64150b22c135dc59",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "asdf@1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m.rezaie94@yahoo.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verify_code",
+									"value": "16330",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "mohamad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "rezaie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "+982144890235",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+									"disabled": true
+								},
+								{
+									"key": "bio",
+									"value": "hello boys",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth_day",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "receiver",
+									"value": "yasi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sender",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "this is first edited post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/bigmo/Downloads/wil-stewart-pHANr-CpbYM-unsplash.jpg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "following",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "follower",
+									"value": "bigmo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"like",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 20 Sep 2021 13:33:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"post\": 3,\n    \"liked_by\": 6\n}"
+				}
+			]
+		}
+	]
+}
