@@ -73,4 +73,5 @@ class UnFollowDestroyAPIView(generics.DestroyAPIView):
     queryset = Follow.objects.all()
 
     def get_object(self):
-        return Follow.objects.filter(follower=self.request.user, following__username=self.request.data.get('follower')).first()
+        return Follow.objects.filter(follower=self.request.user,
+                                     following__username=self.request.data.get('follower'))

@@ -46,7 +46,3 @@ class CommentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView)
 class LikeListCreateAPIView(generics.ListCreateAPIView):
     queryset = PostLike.objects.all()
     serializer_class = PostLikeSerializer
-
-    def perform_create(self, serializer):
-        post_id = Post.objects.filter(pk=serializer.validated_data.get('id'))
-        PostLike.objects.create(user=self.request.user, post__id=post_id)
