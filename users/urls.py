@@ -5,7 +5,8 @@ from .views import (ProfileRegisterAPIView,
                     ProfileVerifyAPIView,
                     ProfileRetrieveUpdateDestroyAPIView,
                     MessageListCreateAPIView,
-                    FollowCreateListAPIView, )
+                    FollowCreateListAPIView,
+                    UnFollowDestroyAPIView, )
 
 app_name = 'users'
 
@@ -15,6 +16,7 @@ urlpatterns = [
     path('login/', ProfileLoginAPIView.as_view(), name='login'),
     path('profile/<int:pk>/', ProfileRetrieveUpdateDestroyAPIView.as_view(), name='profile'),
     path('message/', MessageListCreateAPIView.as_view(), name='message'),
-    path('follow/', FollowCreateListAPIView.as_view(), name='follow')
+    path('follow/', FollowCreateListAPIView.as_view(), name='follow'),
+    path('unfollow/', UnFollowDestroyAPIView.as_view(), name='unfollow'),
 
 ]
