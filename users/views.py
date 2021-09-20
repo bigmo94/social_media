@@ -66,3 +66,11 @@ class FollowCreateListAPIView(generics.ListCreateAPIView):
         headers = self.get_success_headers(serializer.data)
         response = {'username': instance.following.username}
         return Response(response, status=status.HTTP_201_CREATED, headers=headers)
+
+
+class UnFollowDestroyAPIView(generics.DestroyAPIView):
+    serializer_class = FollowSerializer
+    queryset = Follow.objects.all()
+
+    def get_object(self):
+        return Follow.objects.filter(follower=self.request.user, following__username=self.request.data.get('follower')).first()
