@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 from rest_framework import generics, status
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.exceptions import ValidationError
 from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
 from rest_framework.response import Response
@@ -25,6 +26,19 @@ class ProfileVerifyAPIView(generics.CreateAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileVerifySerializer
     permission_classes = [AllowAny, ]
+
+    def create(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        try:
+            profile = Profile.objects.get(email=email)
+        except Profile.DoesNotExist:
+            raise ValidationError("Wrong email")
+
+        serializer = self.serializer_class(instance=profile, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.data)
 
 
 class ProfileLoginAPIView(generics.CreateAPIView):

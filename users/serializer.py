@@ -48,26 +48,38 @@ class ProfileVerifySerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['email', 'verify_code']
-        extra_kwargs = {'email': {"validators": []}}
 
-    def create(self, validated_data):
-        email = validated_data['email']
-        try:
-            profile = Profile.objects.get(email=email)
-
-        except Profile.DoesNotExist:
-            raise ValidationError("Wrong email")
-
-        cache_key = 'login_code_{}'.format(email)
+    def update(self, instance, validated_data):
+        cache_key = 'login_code_{}'.format(instance.email)
         sent_code = cache.get(cache_key, None)
         input_code = validated_data.get('verify_code')
 
         if sent_code and sent_code == input_code:
-            profile.is_active = True
-            profile.save()
+            instance.is_active = True
+            instance.save()
         else:
             raise ValidationError('Wrong verify code')
-        return profile
+        return instance
+
+    # todo: must remove
+    # def create(self, validated_data):
+    #     email = validated_data['email']
+    #     try:
+    #         profile = Profile.objects.get(email=email)
+    #
+    #     except Profile.DoesNotExist:
+    #         raise ValidationError("Wrong email")
+    #
+    #     cache_key = 'login_code_{}'.format(email)
+    #     sent_code = cache.get(cache_key, None)
+    #     input_code = validated_data.get('verify_code')
+    #
+    #     if sent_code and sent_code == input_code:
+    #         profile.is_active = True
+    #         profile.save()
+    #     else:
+    #         raise ValidationError('Wrong verify code')
+    #     return profile
 
 
 class ProfileLoginSerializer(serializers.ModelSerializer):
