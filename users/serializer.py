@@ -5,6 +5,7 @@ from django.core.cache import cache
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from rest_framework.exceptions import ValidationError
+from .tasks import send_verification_code_task
 
 from .models import Profile, Message, Follow
 from .utils import send_verification_code
@@ -36,7 +37,7 @@ class ProfileRegisterSerializer(serializers.ModelSerializer):
             verify_code = code_generator()
             cache_key = 'login_code_{}'.format(email)
             cache.set(cache_key, verify_code, timeout=120)
-            send_verification_code(profile.email, verify_code)
+            send_verification_code_task.delay(profile.email, verify_code)
 
         return profile
 

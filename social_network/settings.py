@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'posts',
     'rest_framework',
     'rest_framework.authtoken',
+    'celery',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,4 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+
