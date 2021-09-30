@@ -11,9 +11,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
-    'add-every-monday-morning': {
+    'send_news_every_day': {
         'task': 'send_news',
-        'schedule': crontab(hour=7, minute=30),
+        'schedule': crontab(minute='*/1'),
     },
 }
 

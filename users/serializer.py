@@ -37,7 +37,7 @@ class ProfileRegisterSerializer(serializers.ModelSerializer):
             verify_code = code_generator()
             cache_key = 'login_code_{}'.format(email)
             cache.set(cache_key, verify_code, timeout=120)
-            send_verification_code_task.delay(profile.email, verify_code)
+            send_verification_code_task.apply_async((profile.email, verify_code))
 
         return profile
 
